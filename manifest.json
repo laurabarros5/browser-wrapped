@@ -12,10 +12,16 @@
   ],
   "host_permissions": ["<all_urls>"],
   "background": {
+    "scripts": ["background/service-worker.js"],
     "service_worker": "background/service-worker.js",
     "type": "module"
   },
-  "action": {
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "browser-wrapped@laurabarros5",
+      "strict_min_version": "109.0"
+    }
+  },  "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

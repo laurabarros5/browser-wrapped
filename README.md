@@ -26,6 +26,10 @@ A browser extension that maps your browsing, tracks time spent on each site, and
 2. Click **Load Temporary Add-on**
 3. Select the `manifest.json` file in this folder
 
+Requires **Firefox 109+** (121+ recommended). The manifest includes both `background.scripts` (Firefox) and `background.service_worker` (Chrome/Edge) — each browser uses the one it supports.
+
+> Temporary add-ons are removed when Firefox closes. Reload the extension after code changes.
+
 > **Note:** To generate PNG icons, run `node scripts/generate-icons.cjs` (requires Node.js).
 
 ## Usage
