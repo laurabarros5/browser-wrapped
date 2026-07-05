@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Wrapped",
+  "version": "1.0.0",
+  "description": "Mapeie sua navegação, conte o tempo em cada site e receba um Wrapped semanal — como o Spotify, só que do seu navegador.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "idle",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Browser Wrapped"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "options/options.html"
+}

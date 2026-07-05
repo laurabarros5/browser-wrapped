@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Browser Wrapped — Configurações</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌐 Browser Wrapped</h1>
+      <p>Configurações de rastreamento</p>
+    </header>
+
+    <section class="card">
+      <label class="toggle-row">
+        <div>
+          <strong>Rastreamento ativo</strong>
+          <p>Pausar para de contar tempo sem desinstalar a extensão</p>
+        </div>
+        <input type="checkbox" id="tracking-enabled" checked>
+      </label>
+    </section>
+
+    <section class="card">
+      <label>
+        <strong>Tempo de inatividade (minutos)</strong>
+        <p>Parar de contar após ficar inativo por este período</p>
+        <input type="number" id="idle-threshold" min="1" max="60" value="5">
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>Privacidade</h2>
+      <p class="privacy-note">
+        Todos os dados ficam <strong>apenas no seu navegador</strong>. Nada é enviado para servidores externos.
+        Apenas domínios são registrados (ex: github.com), nunca URLs completas ou conteúdo das páginas.
+      </p>
+    </section>
+
+    <section class="card danger">
+      <h2>Zona de perigo</h2>
+      <p>Apaga permanentemente todo o histórico de navegação rastreado.</p>
+      <button id="btn-clear" class="btn-danger">Apagar todos os dados</button>
+    </section>
+
+    <section class="card">
+      <button id="btn-wrapped" class="btn-primary">🎉 Abrir Wrapped Semanal</button>
+    </section>
+
+    <p class="saved" id="saved-msg"></p>
+  </div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

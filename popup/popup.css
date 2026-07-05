@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 380px;
+  min-height: 480px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0a0a0f;
+  color: #f0f0f5;
+}
+
+.popup {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #1db954, #1ed760);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.subtitle.tracking {
+  color: #1db954;
+}
+
+.summary-card {
+  display: flex;
+  background: linear-gradient(135deg, #16161f, #1a1a28);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #2a2a3a;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1db954;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  background: #2a2a3a;
+  margin: 0 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  background: #16161f;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #888;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: #1db954;
+  color: #000;
+}
+
+.tab-panel {
+  display: none;
+  min-height: 200px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h2 {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.site-list, .category-list {
+  list-style: none;
+}
+
+.site-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #1a1a28;
+}
+
+.site-item:last-child {
+  border-bottom: none;
+}
+
+.site-rank {
+  width: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  text-align: center;
+}
+
+.site-rank.top {
+  color: #1db954;
+}
+
+.site-favicon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #2a2a3a;
+}
+
+.site-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.site-name {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-meta {
+  font-size: 11px;
+  color: #666;
+}
+
+.site-time {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1db954;
+  white-space: nowrap;
+}
+
+.site-bar-wrap {
+  width: 100%;
+  height: 3px;
+  background: #2a2a3a;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.site-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #1db954, #1ed760);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #1a1a28;
+}
+
+.category-emoji {
+  font-size: 20px;
+  width: 32px;
+  text-align: center;
+}
+
+.category-info {
+  flex: 1;
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.category-bar-wrap {
+  height: 4px;
+  background: #2a2a3a;
+  border-radius: 2px;
+  margin-top: 6px;
+}
+
+.category-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+}
+
+.category-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: #888;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 32px 16px;
+  color: #555;
+  font-size: 13px;
+}
+
+.footer {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn-wrapped {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #1db954, #169c46);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-wrapped:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(29, 185, 84, 0.3);
+}
+
+.link-options {
+  font-size: 12px;
+  color: #666;
+  text-decoration: none;
+}
+
+.link-options:hover {
+  color: #1db954;
+}

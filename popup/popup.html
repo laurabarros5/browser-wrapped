@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Wrapped</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup">
+    <header class="header">
+      <div class="logo">🌐</div>
+      <div>
+        <h1>Browser Wrapped</h1>
+        <p class="subtitle" id="live-status">Rastreando...</p>
+      </div>
+    </header>
+
+    <section class="summary-card">
+      <div class="stat">
+        <span class="stat-value" id="today-time">—</span>
+        <span class="stat-label">Hoje</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="week-time">—</span>
+        <span class="stat-label">Esta semana</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value" id="site-count">—</span>
+        <span class="stat-label">Sites</span>
+      </div>
+    </section>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="today">Hoje</button>
+      <button class="tab" data-tab="week">Semana</button>
+      <button class="tab" data-tab="categories">Categorias</button>
+    </nav>
+
+    <section class="tab-panel active" id="panel-today">
+      <h2>Top sites de hoje</h2>
+      <ul class="site-list" id="today-list"></ul>
+    </section>
+
+    <section class="tab-panel" id="panel-week">
+      <h2>Top sites da semana</h2>
+      <ul class="site-list" id="week-list"></ul>
+    </section>
+
+    <section class="tab-panel" id="panel-categories">
+      <h2>Por categoria</h2>
+      <ul class="category-list" id="category-list"></ul>
+    </section>
+
+    <footer class="footer">
+      <button class="btn-wrapped" id="btn-wrapped">🎉 Ver Wrapped Semanal</button>
+      <a href="#" id="link-options" class="link-options">Configurações</a>
+    </footer>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
