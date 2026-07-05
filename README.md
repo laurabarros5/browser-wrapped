@@ -79,7 +79,10 @@ browser-wrapped/
 
 ## Publicar no GitHub
 
-Passo a passo completo em **[GITHUB_SETUP.md](GITHUB_SETUP.md)**.
+**Repositório:** https://github.com/laurabarros5/browser-wrapped
+
+- **Guia detalhado (comece aqui):** [GUIA_GITHUB_DETALHADO.md](GUIA_GITHUB_DETALHADO.md)
+- Guia resumido: [GITHUB_SETUP.md](GITHUB_SETUP.md)
 
 ## Licença
 
